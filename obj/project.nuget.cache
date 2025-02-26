@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "cxJDr6fMBBY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Sai Indu\\source\\repos\\FileIO\\FileIO\\FileIO.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sai Indu\\.nuget\\packages\\csvhelper\\33.0.1\\csvhelper.33.0.1.nupkg.sha512",
+    "C:\\Users\\Sai Indu\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Sai Indu\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
