@@ -1,0 +1,22 @@
+[
+  {
+    "StdId": 101,
+    "StdName": "krishna",
+    "StdBranch": "CSE"
+  },
+  {
+    "StdId": 102,
+    "StdName": "sai",
+    "StdBranch": "CSE"
+  },
+  {
+    "StdId": 103,
+    "StdName": "Narasimha",
+    "StdBranch": "Mech"
+  },
+  {
+    "StdId": 104,
+    "StdName": "Np",
+    "StdBranch": "ECE"
+  }
+]

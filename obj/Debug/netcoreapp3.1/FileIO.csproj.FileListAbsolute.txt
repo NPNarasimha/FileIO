@@ -15,3 +15,4 @@ C:\Users\Sai Indu\source\repos\FileIO\FileIO\bin\Debug\netcoreapp3.1\CsvHelper.d
 C:\Users\Sai Indu\source\repos\FileIO\FileIO\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Sai Indu\source\repos\FileIO\FileIO\obj\Debug\netcoreapp3.1\FileIO.csproj.AssemblyReference.cache
 C:\Users\Sai Indu\source\repos\FileIO\FileIO\obj\Debug\netcoreapp3.1\FileIO.csproj.Up2Date
+C:\Users\Sai Indu\source\repos\FileIO\FileIO\obj\Debug\netcoreapp3.1\FileIO.sourcelink.json

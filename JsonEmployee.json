@@ -1,0 +1,26 @@
+[
+  {
+    "EmpId": 101,
+    "EmpName": "Krishna",
+    "EmpSalary": 45333.0,
+    "EmpRole": "Software Developer"
+  },
+  {
+    "EmpId": 102,
+    "EmpName": "Krishna Sai",
+    "EmpSalary": 34443.0,
+    "EmpRole": "Software Engineer"
+  },
+  {
+    "EmpId": 103,
+    "EmpName": "Np",
+    "EmpSalary": 45454.0,
+    "EmpRole": "Software Tester"
+  },
+  {
+    "EmpId": 104,
+    "EmpName": "Narasimha",
+    "EmpSalary": 84848.0,
+    "EmpRole": "Software Traine"
+  }
+]
