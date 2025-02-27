@@ -15,7 +15,7 @@ namespace FileIO
          static void Main(string[] args)
         {
             /////////////////////////////////Employeee Csv/////////////////////////////////////////
-            // instal csvhelper in nuget manager
+          /*  // instal csvhelper in nuget manager
              //Employee csv File 
              List<Employee> empData = new List<Employee>{ 
 
@@ -36,7 +36,7 @@ namespace FileIO
                }
              */
 
-            using (var reader = new StreamReader(csvPath))
+          /*  using (var reader = new StreamReader(csvPath))
             using (var csvReader = new CsvReader(reader, CultureInfo.InvariantCulture))
             {
                 var records = csvReader.GetRecords<Employee>();
@@ -46,7 +46,8 @@ namespace FileIO
                 }
 
             }
-            
+          */
+
 
 
             ////////////////////////////////////////Student CSV///////////////////////////////////////////////////
@@ -80,6 +81,50 @@ namespace FileIO
              }
             */
 
+            //////////////////////////////////Update the data in csv//////////////////////////////
+            List<Student> stdData = new List<Student>
+                  {
+                      new Student{StdId=101,StdName="krishna",StdBranch="CSE"},
+                      new Student{StdId=102,StdName="sai",StdBranch="CSE"},
+                      new Student{StdId=103,StdName="Narasimha",StdBranch="Mech"},
+                      new Student{StdId=104,StdName="Np",StdBranch="ECE"}
+
+                  };
+
+            string csvPathStdUpdate = @"C:\Users\Sai Indu\source\repos\FileIO\FileIO\csvStdUdate.csv";
+            //File.Create(csvPathStdUpdate);
+            /*  using(var sw=new StreamWriter(csvPathStdUpdate))
+               using (var csvWrite = new CsvWriter(sw, CultureInfo.InvariantCulture))
+               {
+                   csvWrite.WriteRecords(stdData);
+               }
+             */
+
+            foreach (Student student in stdData)
+            {
+                if(student.StdId == 101)
+                {
+                    student.StdName = "Kowsalya";
+
+                }
+            }
+            using (var sw = new StreamWriter(csvPathStdUpdate))
+            using (var csvWrite = new CsvWriter(sw, CultureInfo.InvariantCulture))
+            {
+                csvWrite.WriteRecords(stdData);
+            }
+
+            using (var sr = new StreamReader(csvPathStdUpdate))
+             using (var csvStdReader = new CsvReader(sr,CultureInfo.InvariantCulture))
+             {
+                 var records = csvStdReader.GetRecords<Student>();
+                 foreach (var rec in records)
+                 {
+                     Console.WriteLine($"StdId ={rec.StdId}, StdName ={rec.StdName}, stdBranch ={rec.StdBranch}");
+                 }
+             }
+
+
             ////////////////////////////////////////Employee Json////////////////////////////////////////////////
             //instal the NewtonSoft.json
 
@@ -107,45 +152,32 @@ namespace FileIO
 
             ////////////////////////////////Json Student /////////////////////////////////////////////
 
-          /*  string stdPath = @"C:\Users\Sai Indu\source\repos\FileIO\FileIO\JsonStudent.json";
-            //File.Create(stdPath);
+            /*  string stdPath = @"C:\Users\Sai Indu\source\repos\FileIO\FileIO\JsonStudent.json";
+              //File.Create(stdPath);
 
-            List<Student> stdData = new List<Student>
-                  {
-                      new Student{StdId=101,StdName="krishna",StdBranch="CSE"},
-                      new Student{StdId=102,StdName="sai",StdBranch="CSE"},
-                      new Student{StdId=103,StdName="Narasimha",StdBranch="Mech"},
-                      new Student{StdId=104,StdName="Np",StdBranch="ECE"}
+              List<Student> stdData = new List<Student>
+                    {
+                        new Student{StdId=101,StdName="krishna",StdBranch="CSE"},
+                        new Student{StdId=102,StdName="sai",StdBranch="CSE"},
+                        new Student{StdId=103,StdName="Narasimha",StdBranch="Mech"},
+                        new Student{StdId=104,StdName="Np",StdBranch="ECE"}
 
-                  };
+                    };
 
 
-            /*
-            string stdDatajson=JsonConvert.SerializeObject(stdData,Formatting.Indented);
-            File.WriteAllText(stdPath,stdDatajson);
+              /*
+              string stdDatajson=JsonConvert.SerializeObject(stdData,Formatting.Indented);
+              File.WriteAllText(stdPath,stdDatajson);
+              */
+
+            /*  var jsonReader=File.ReadAllText(stdPath);
+              var deserilizableData=JsonConvert.DeserializeObject<List<Student>>(jsonReader);
+              foreach (var std in deserilizableData)
+              {
+                  Console.WriteLine($"StdId ={std.StdId}, StdName ={std.StdName}, stdBranch ={std.StdBranch}");
+
+              }
             */
-           
-          /*  var jsonReader=File.ReadAllText(stdPath);
-            var deserilizableData=JsonConvert.DeserializeObject<List<Student>>(jsonReader);
-            foreach (var std in deserilizableData)
-            {
-                Console.WriteLine($"StdId ={std.StdId}, StdName ={std.StdName}, stdBranch ={std.StdBranch}");
-
-            }
-          */
-           
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
